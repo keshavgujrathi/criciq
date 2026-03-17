@@ -104,7 +104,7 @@ The most structurally demanding mode. The system prompt instructs chain-of-thoug
 ## Running Locally
 
 ```bash
-git clone <repo>
+git clone https://github.com/keshavgujrathi/criciq.git
 cd criciq
 pip install -r requirements.txt
 cp .env.example .env
