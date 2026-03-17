@@ -1,0 +1,82 @@
+[
+  {
+    "id": "tc_001",
+    "match_title": "New Zealand vs South Africa",
+    "context_str": "Match: South Africa tour of New Zealand, 2026 - International | Venue: Seddon Park, Hamilton | Toss: South Africa opt to bowl",
+    "scorecard_str": "New Zealand: 175/6 (20.0 overs) RR: 8.75\nCurrent Bowlers:\nGerald Coetzee: 4 ov, 28 runs, 1 wkts, Econ: 7\nNqobani Mokoena: 4 ov, 22 runs, 0 wkts, Econ: 5.5\nOttneil Baartman: 4 ov, 31 runs, 1 wkts, Econ: 7.8\n\nSouth Africa: 107/10 (15.3 overs) RR: 6.9\nCurrent Bowlers:\nKyle Jamieson: 3 ov, 22 runs, 0 wkts, Econ: 7.3\nLockie Ferguson: 3.3 ov, 16 runs, 3 wkts, Econ: 4.6\nBen Sears: 3 ov, 14 runs, 3 wkts, Econ: 4.7",
+    "commentary_str": "1. Match completed - no live commentary available. Analysis based on final scorecard.",
+    "modes_to_test": ["match_analyst", "tactical"]
+  },
+  {
+    "id": "tc_002",
+    "match_title": "Bangladesh vs Pakistan",
+    "context_str": "Match: Pakistan tour of Bangladesh, 2026 - International | Venue: Shere Bangla National Stadium, Mirpur | Toss: Bangladesh opt to bat",
+    "scorecard_str": "Bangladesh: 142/8 (20.0 overs) RR: 7.1\nCurrent Bowlers:\nHaris Rauf: 4 ov, 22 runs, 2 wkts, Econ: 5.5\nShaheen Afridi: 4 ov, 18 runs, 1 wkts, Econ: 4.5\nNaseem Shah: 3.3 ov, 24 runs, 2 wkts, Econ: 7.2\n\nPakistan: 131/10 (19.4 overs) RR: 6.6\nCurrent Bowlers:\nMustafizur Rahman: 4 ov, 19 runs, 3 wkts, Econ: 4.8\nTaskin Ahmed: 3.4 ov, 28 runs, 2 wkts, Econ: 7.3\nShakib Al Hasan: 4 ov, 15 runs, 1 wkts, Econ: 3.8",
+    "commentary_str": "1. Match completed - no live commentary available. Analysis based on final scorecard.",
+    "modes_to_test": ["match_analyst", "tactical"]
+  },
+  {
+    "id": "tc_003",
+    "match_title": "Pakistan vs Bangladesh",
+    "context_str": "Match: Pakistan tour of Bangladesh, 2026 - International | Venue: Zahur Ahmed Chowdhury Stadium, Chattogram | Toss: Pakistan opt to bat",
+    "scorecard_str": "Pakistan: 242/7 (50.0 overs) RR: 4.84\nCurrent Bowlers:\nTaskin Ahmed: 10 ov, 45 runs, 2 wkts, Econ: 4.5\nMustafizur Rahman: 8 ov, 38 runs, 2 wkts, Econ: 4.8\nMehidy Hasan: 10 ov, 52 runs, 1 wkts, Econ: 5.2\n\nBangladesh: 114/10 (32.0 overs) RR: 3.56\nCurrent Bowlers:\nShaheen Afridi: 7 ov, 18 runs, 3 wkts, Econ: 2.6\nHaris Rauf: 6 ov, 22 runs, 2 wkts, Econ: 3.7\nNaseem Shah: 5 ov, 19 runs, 2 wkts, Econ: 3.8",
+    "commentary_str": "1. Match completed - no live commentary available. Analysis based on final scorecard.",
+    "modes_to_test": ["match_analyst"]
+  },
+  {
+    "id": "tc_004",
+    "match_title": "New South Wales vs Western Australia",
+    "context_str": "Match: Sheffield Shield 2025-26 - Domestic | Venue: Sydney Cricket Ground, Sydney | Toss: New South Wales opt to bat",
+    "scorecard_str": "New South Wales: 312/8 (85.0 overs) RR: 3.67\nCurrent Bowlers:\nJhye Richardson: 18 ov, 62 runs, 3 wkts, Econ: 3.4\nAndrew Tye: 15 ov, 48 runs, 2 wkts, Econ: 3.2\nAaron Hardie: 12 ov, 41 runs, 1 wkts, Econ: 3.4\n\nWestern Australia: 198/10 (62.3 overs) RR: 3.16\nCurrent Bowlers:\nNathan Lyon: 22 ov, 35 runs, 4 wkts, Econ: 1.6\nJackson Bird: 15 ov, 38 runs, 3 wkts, Econ: 2.5\nSean Abbott: 10 ov, 28 runs, 2 wkts, Econ: 2.8",
+    "commentary_str": "1. Match completed - no live commentary available. Analysis based on final scorecard.",
+    "modes_to_test": ["match_analyst", "tactical"]
+  },
+  {
+    "id": "tc_005",
+    "match_title": "Cyprus vs Austria",
+    "context_str": "Match: Austria tour of Cyprus 2026 - International | Venue: Ypsonas Cricket Ground, Limassol | Toss: Cyprus opt to field",
+    "scorecard_str": "Austria: 189/9 (20.0 overs) RR: 9.45\nCurrent Bowlers:\nGaurav Tomar: 4 ov, 35 runs, 2 wkts, Econ: 8.8\nVikramjit Singh: 3 ov, 22 runs, 1 wkts, Econ: 7.3\nMehran Khan: 4 ov, 42 runs, 3 wkts, Econ: 10.5\n\nCyprus: 137/10 (18.4 overs) RR: 7.38\nCurrent Bowlers:\nBilal Haider: 4 ov, 28 runs, 3 wkts, Econ: 7.0\nAqib Ilyas: 3.4 ov, 31 runs, 2 wkts, Econ: 8.5\nRahmanullah Gurbaz: 2 ov, 15 runs, 1 wkts, Econ: 7.5",
+    "commentary_str": "1. Match completed - no live commentary available. Analysis based on final scorecard.",
+    "modes_to_test": ["match_analyst"]
+  },
+  {
+    "id": "tc_006",
+    "match_title": "Argentina vs Cayman Islands",
+    "context_str": "Match: ICC Men's T20 2028 World Cup Americas Sub Regional Qualifier B, 2026 - International | Venue: Sir Vivian Richards Stadium, Antigua | Toss: Argentina opt to bat",
+    "scorecard_str": "Argentina: 145/9 (20.0 overs) RR: 7.25\nCurrent Bowlers:\nConroy Wright: 4 ov, 22 runs, 2 wkts, Econ: 5.5\nKervin Ebanks: 3 ov, 28 runs, 1 wkts, Econ: 9.3\nSteven Jacobs: 4 ov, 35 runs, 3 wkts, Econ: 8.8\n\nCayman Islands: 89/10 (17.2 overs) RR: 5.14\nCurrent Bowlers:\nJuan Barros: 3.2 ov, 12 runs, 3 wkts, Econ: 3.6\nMateo Villar: 4 ov, 18 runs, 2 wkts, Econ: 4.5\nPedro De Silva: 3 ov, 15 runs, 2 wkts, Econ: 5.0",
+    "commentary_str": "1. Match completed - no live commentary available. Analysis based on final scorecard.",
+    "modes_to_test": ["match_analyst", "tactical"]
+  },
+  {
+    "id": "tc_007",
+    "match_title": "New Zealand vs South Africa",
+    "context_str": "Match: South Africa tour of New Zealand, 2026 - International | Venue: Eden Park, Auckland | Toss: New Zealand opt to bowl",
+    "scorecard_str": "South Africa: 156/8 (20.0 overs) RR: 7.8\nCurrent Bowlers:\nLockie Ferguson: 4 ov, 25 runs, 2 wkts, Econ: 6.3\nMitchell Santner: 4 ov, 18 runs, 1 wkts, Econ: 4.5\nIsh Sodhi: 3 ov, 22 runs, 2 wkts, Econ: 7.3\n\nNew Zealand: 158/3 (18.5 overs) RR: 8.4\nCurrent Bowlers:\nKeshav Maharaj: 3.5 ov, 28 runs, 1 wkts, Econ: 8.0\nGerald Coetzee: 4 ov, 35 runs, 1 wkts, Econ: 8.8\nOttneil Baartman: 3 ov, 24 runs, 0 wkts, Econ: 8.0",
+    "commentary_str": "1. Match completed - no live commentary available. Analysis based on final scorecard.",
+    "modes_to_test": ["match_analyst", "tactical"]
+  },
+  {
+    "id": "tc_008",
+    "match_title": "Bangladesh vs Pakistan",
+    "context_str": "Match: Pakistan tour of Bangladesh, 2026 - International | Venue: Zahur Ahmed Chowdhury Stadium, Chattogram | Toss: Bangladesh opt to bowl",
+    "scorecard_str": "Pakistan: 178/7 (20.0 overs) RR: 8.9\nCurrent Bowlers:\nMustafizur Rahman: 4 ov, 32 runs, 2 wkts, Econ: 8.0\nTaskin Ahmed: 3.3 ov, 28 runs, 1 wkts, Econ: 8.4\nMehidy Hasan: 4 ov, 35 runs, 2 wkts, Econ: 8.8\n\nBangladesh: 179/4 (19.2 overs) RR: 9.3\nCurrent Bowlers:\nHaris Rauf: 4 ov, 38 runs, 1 wkts, Econ: 9.5\nShaheen Afridi: 3.2 ov, 25 runs, 2 wkts, Econ: 7.8\nNaseem Shah: 4 ov, 42 runs, 1 wkts, Econ: 10.5",
+    "commentary_str": "1. Match completed - no live commentary available. Analysis based on final scorecard.",
+    "modes_to_test": ["match_analyst", "tactical"]
+  },
+  {
+    "id": "tc_009",
+    "match_title": "Victoria vs Queensland",
+    "context_str": "Match: Sheffield Shield 2025-26 - Domestic | Venue: Melbourne Cricket Ground, Melbourne | Toss: Victoria opt to bat",
+    "scorecard_str": "Victoria: 287/9 (90.0 overs) RR: 3.19\nCurrent Bowlers:\nMark Steketee: 18 ov, 52 runs, 3 wkts, Econ: 2.9\nJack Wildermuth: 15 ov, 41 runs, 2 wkts, Econ: 2.7\nMitchell Swepson: 20 ov, 58 runs, 3 wkts, Econ: 2.9\n\nQueensland: 165/10 (58.3 overs) RR: 2.82\nCurrent Bowlers:\nScott Boland: 18 ov, 32 runs, 4 wkts, Econ: 1.8\nTodd Murphy: 15 ov, 28 runs, 3 wkts, Econ: 1.9\nPeter Handscomb: 5 ov, 12 runs, 1 wkts, Econ: 2.4",
+    "commentary_str": "1. Match completed - no live commentary available. Analysis based on final scorecard.",
+    "modes_to_test": ["match_analyst"]
+  },
+  {
+    "id": "tc_010",
+    "match_title": "Pakistan vs Bangladesh",
+    "context_str": "Match: Pakistan tour of Bangladesh, 2026 - International | Venue: Bangabandhu National Stadium, Dhaka | Toss: Pakistan opt to field",
+    "scorecard_str": "Bangladesh: 198/6 (20.0 overs) RR: 9.9\nCurrent Bowlers:\nHaris Rauf: 4 ov, 42 runs, 1 wkts, Econ: 10.5\nShaheen Afridi: 4 ov, 38 runs, 2 wkts, Econ: 9.5\nNaseem Shah: 3 ov, 35 runs, 1 wkts, Econ: 11.7\n\nPakistan: 201/5 (19.1 overs) RR: 10.5\nCurrent Bowlers:\nMustafizur Rahman: 3.1 ov, 32 runs, 2 wkts, Econ: 10.3\nTaskin Ahmed: 4 ov, 45 runs, 1 wkts, Econ: 11.3\nMehidy Hasan: 4 ov, 38 runs, 1 wkts, Econ: 9.5",
+    "commentary_str": "1. Match completed - no live commentary available. Analysis based on final scorecard.",
+    "modes_to_test": ["match_analyst", "tactical"]
+  }
+]

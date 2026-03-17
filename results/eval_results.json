@@ -1,0 +1,287 @@
+[
+  {
+    "test_case_id": "tc_001",
+    "match_title": "New Zealand vs South Africa",
+    "mode": "match_analyst",
+    "prompt_version": "v2",
+    "response_time_ms": 1987.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "5",
+      "80",
+      "2",
+      "15",
+      "176"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "## MATCH STATE: \nThe match between New Zealand and South Africa has concluded, with New Zealand batting first and setting a target of 176 runs. South Africa attempted to chase this target but were bow..."
+  },
+  {
+    "test_case_id": "tc_001",
+    "match_title": "New Zealand vs South Africa",
+    "mode": "tactical",
+    "prompt_version": "v1",
+    "response_time_ms": 2033.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "20",
+      "2"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "SITUATION ASSESSMENT: The match is completed, with New Zealand scoring 175/6 in 20 overs and South Africa being bowled out for 107 in 15.3 overs, resulting in a New Zealand win. The key to this victor..."
+  },
+  {
+    "test_case_id": "tc_002",
+    "match_title": "Bangladesh vs Pakistan",
+    "mode": "match_analyst",
+    "prompt_version": "v2",
+    "response_time_ms": 2025.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "60",
+      "20",
+      "11",
+      "100",
+      "0"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "## MATCH STATE: \nThe match between Bangladesh and Pakistan has concluded, with Bangladesh batting first and scoring 142/8 in their 20 overs, while Pakistan were bowled out for 131 in 19.4 overs. Bangl..."
+  },
+  {
+    "test_case_id": "tc_002",
+    "match_title": "Bangladesh vs Pakistan",
+    "mode": "tactical",
+    "prompt_version": "v1",
+    "response_time_ms": 2185.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": false,
+    "ungrounded_numbers": [],
+    "structurally_consistent": false,
+    "response_preview": "SITUATION ASSESSMENT: The match is evenly poised with Bangladesh needing to defend a modest total of 142, while Pakistan's batting lineup has shown vulnerability, getting bowled out for 131 in their i..."
+  },
+  {
+    "test_case_id": "tc_003",
+    "match_title": "Pakistan vs Bangladesh",
+    "mode": "match_analyst",
+    "prompt_version": "v2",
+    "response_time_ms": 1961.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "60",
+      "32",
+      "30",
+      "50"
+    ],
+    "structurally_consistent": false,
+    "response_preview": "## MATCH STATE: \nPakistan opted to bat first and managed to score 242/7 in their 50 overs, with a run rate of 4.84. Bangladesh, in response, were bowled out for 114 in 32 overs, achieving a run rate o..."
+  },
+  {
+    "test_case_id": "tc_004",
+    "match_title": "New South Wales vs Western Australia",
+    "mode": "match_analyst",
+    "prompt_version": "v2",
+    "response_time_ms": 1886.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "20",
+      "6",
+      "85",
+      "30",
+      "50"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "## MATCH STATE: \nNew South Wales has opted to bat and has scored 312 runs for the loss of 8 wickets in 85 overs, achieving a run rate of 3.67. Western Australia, in their first innings, was bowled out..."
+  },
+  {
+    "test_case_id": "tc_004",
+    "match_title": "New South Wales vs Western Australia",
+    "mode": "tactical",
+    "prompt_version": "v1",
+    "response_time_ms": 2499.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "114",
+      "40",
+      "85",
+      "30"
+    ],
+    "structurally_consistent": false,
+    "response_preview": "SITUATION ASSESSMENT: New South Wales is in a strong position with a significant lead of 114 runs, having batted for 85 overs and lost 8 wickets, indicating a good batting performance on a pitch that ..."
+  },
+  {
+    "test_case_id": "tc_005",
+    "match_title": "Cyprus vs Austria",
+    "mode": "match_analyst",
+    "prompt_version": "v2",
+    "response_time_ms": 1926.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "190",
+      "100",
+      "8",
+      "0"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "## MATCH STATE\nThe match between Cyprus and Austria has concluded, with Austria setting a target of 190 runs after being put in to bat by Cyprus. Cyprus was unable to chase down the target, being bowl..."
+  },
+  {
+    "test_case_id": "tc_006",
+    "match_title": "Argentina vs Cayman Islands",
+    "mode": "match_analyst",
+    "prompt_version": "v2",
+    "response_time_ms": 1787.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "5",
+      "20",
+      "6",
+      "80"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "## MATCH STATE: \nArgentina batted first and scored 145/9 in their 20 overs, with a run rate of 7.25. The Cayman Islands, in response, were bowled out for 89 in 17.2 overs, achieving a run rate of 5.14..."
+  },
+  {
+    "test_case_id": "tc_006",
+    "match_title": "Argentina vs Cayman Islands",
+    "mode": "tactical",
+    "prompt_version": "v1",
+    "response_time_ms": 2170.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": false,
+    "ungrounded_numbers": [
+      "20"
+    ],
+    "structurally_consistent": false,
+    "response_preview": "SITUATION ASSESSMENT: The match has already been completed, with Argentina scoring 145/9 in their 20 overs and the Cayman Islands being bowled out for 89 in 17.2 overs, resulting in a comprehensive wi..."
+  },
+  {
+    "test_case_id": "tc_007",
+    "match_title": "New Zealand vs South Africa",
+    "mode": "match_analyst",
+    "prompt_version": "v2",
+    "response_time_ms": 1617.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "5",
+      "6",
+      "80",
+      "7",
+      "15"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "## MATCH STATE: \nNew Zealand is currently in a strong position, having reached 158/3 in 18.5 overs in pursuit of South Africa's total of 156/8. The hosts require just a few more runs to win, with seve..."
+  },
+  {
+    "test_case_id": "tc_007",
+    "match_title": "New Zealand vs South Africa",
+    "mode": "tactical",
+    "prompt_version": "v1",
+    "response_time_ms": 1789.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "7"
+    ],
+    "structurally_consistent": false,
+    "response_preview": "SITUATION ASSESSMENT: New Zealand is in a strong position, requiring only 2 runs to win with 7 wickets in hand, and the current run rate is well above the required rate. The South African bowlers, par..."
+  },
+  {
+    "test_case_id": "tc_008",
+    "match_title": "Bangladesh vs Pakistan",
+    "mode": "match_analyst",
+    "prompt_version": "v2",
+    "response_time_ms": 1892.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "5",
+      "0.8",
+      "100",
+      "0"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "## MATCH STATE: \nBangladesh is currently in a strong position, having successfully chased down Pakistan's total of 178/7 with 4 wickets and 0.8 overs to spare. The hosts have demonstrated a solid batt..."
+  },
+  {
+    "test_case_id": "tc_008",
+    "match_title": "Bangladesh vs Pakistan",
+    "mode": "tactical",
+    "prompt_version": "v1",
+    "response_time_ms": 1883.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "3",
+      "6",
+      "4.4"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "SITUATION ASSESSMENT: Bangladesh is in a strong position, needing only 1 run to win from 4.4 overs with 6 wickets in hand, indicating a high probability of winning. The current bowlers for Pakistan, p..."
+  },
+  {
+    "test_case_id": "tc_009",
+    "match_title": "Victoria vs Queensland",
+    "mode": "match_analyst",
+    "prompt_version": "v2",
+    "response_time_ms": 2184.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "8",
+      "150",
+      "60",
+      "200",
+      "250",
+      "90",
+      "350"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "## MATCH STATE: \nVictoria has opted to bat first and has scored 287/9 in 90 overs, with a run rate of 3.19. Queensland, in response, was bowled out for 165 in 58.3 overs, at a run rate of 2.82. The cu..."
+  },
+  {
+    "test_case_id": "tc_010",
+    "match_title": "Pakistan vs Bangladesh",
+    "mode": "match_analyst",
+    "prompt_version": "v2",
+    "response_time_ms": 1692.0,
+    "format_compliant": true,
+    "missing_sections": [],
+    "hallucination_risk": true,
+    "ungrounded_numbers": [
+      "60",
+      "20"
+    ],
+    "structurally_consistent": true,
+    "response_preview": "## MATCH STATE\nThe match between Pakistan and Bangladesh has concluded, with Pakistan successfully chasing down Bangladesh's total of 198/6 in 20 overs. Pakistan reached 201/5 in 19.1 overs, achieving..."
+  },
+  {
+    "test_case_id": "tc_010",
+    "match_title": "Pakistan vs Bangladesh",
+    "mode": "tactical",
+    "error": "Groq API error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkk9cq9sf4qtnpavs6zfvj4y` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99746, Requested 604. Please try again in 5m2.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+  }
+]
