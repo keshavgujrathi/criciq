@@ -42,6 +42,14 @@ def get_matches():
     fetcher = init_fetcher()
     return fetcher.get_live_matches()
 
+@st.cache_data(ttl=120)
+def get_match_data(match_id, match_title):
+    fetcher = init_fetcher()
+    scorecard = fetcher.get_match_scorecard(match_id)
+    commentary = fetcher.get_match_commentary(match_id)
+    match_info = fetcher.get_match_info(match_id)
+    return format_full_match_data(scorecard, commentary, match_info, match_title)
+
 def main():
     st.title("CricIQ")
     st.caption("AI Cricket Intelligence")
@@ -57,6 +65,7 @@ def main():
         # Refresh button
         if st.button("🔄 Refresh Matches"):
             get_matches.clear()
+            get_match_data.clear()
             st.rerun()
         
         # Get matches
@@ -98,11 +107,10 @@ def main():
     
     # Get match data
     try:
-        with st.spinner("Loading match data..."):
-            scorecard = fetcher.get_match_scorecard(selected_match['match_id'])
-            commentary = fetcher.get_match_commentary(selected_match['match_id'])
-            match_info = fetcher.get_match_info(selected_match['match_id'])
-            match_data = format_full_match_data(scorecard, commentary, match_info, selected_match['match_title'])
+        match_data = get_match_data(
+            selected_match['match_id'],
+            selected_match['match_title']
+        )
     except Exception as e:
         st.error(f"Failed to load match data: {str(e)}")
         return
