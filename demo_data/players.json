@@ -1,0 +1,26 @@
+[
+  {
+    "player_id": "demo_virat",
+    "player_name": "Virat Kohli",
+    "match_title": "India vs England",
+    "scorecard_str": "England: 245/8 (50.0 overs) RR: 4.9\nJoe Root: 78 runs, 95 balls, SR: 82.1\nBen Stokes: 45 runs, 52 balls, SR: 86.5\nJasprit Bumrah: 10 ov, 38 runs, 3 wkts, Econ: 3.8\nMohammed Siraj: 10 ov, 52 runs, 2 wkts, Econ: 5.2\nIndia: 246/6 (47.3 overs) RR: 5.2\nVirat Kohli: 89 runs, 102 balls, SR: 87.3\nRohit Sharma: 54 runs, 61 balls, SR: 88.5",
+    "context_str": "Match: England tour of India, 2026 - International ODI | Venue: Wankhede Stadium, Mumbai | Toss: England opt to bat",
+    "player_stats_str": "Batting Style: Right-hand bat\nTest Average: 48.7 | ODI Average: 58.1 | T20I Average: 52.7\nRecent Form (last 5 ODI innings): 89, 12, 67, 103*, 45\nCareer ODI runs: 13,906 | Centuries: 50 | Half-centuries: 72\nVenue record at Wankhede Stadium: 4 innings, avg 71.5\nVs pace bowling avg: 61.2 | Vs spin bowling avg: 54.8"
+  },
+  {
+    "player_id": "demo_rohit",
+    "player_name": "Rohit Sharma",
+    "match_title": "India vs England",
+    "scorecard_str": "England: 245/8 (50.0 overs) RR: 4.9\nJoe Root: 78 runs, 95 balls, SR: 82.1\nBen Stokes: 45 runs, 52 balls, SR: 86.5\nJasprit Bumrah: 10 ov, 38 runs, 3 wkts, Econ: 3.8\nMohammed Siraj: 10 ov, 52 runs, 2 wkts, Econ: 5.2\nIndia: 246/6 (47.3 overs) RR: 5.2\nVirat Kohli: 89 runs, 102 balls, SR: 87.3\nRohit Sharma: 54 runs, 61 balls, SR: 88.5",
+    "context_str": "Match: England tour of India, 2026 - International ODI | Venue: Wankhede Stadium, Mumbai | Toss: England opt to bat",
+    "player_stats_str": "Batting Style: Right-hand bat\nTest Average: 40.6 | ODI Average: 49.2 | T20I Average: 32.1\nRecent Form (last 5 ODI innings): 54, 0, 87, 34, 119\nCareer ODI runs: 10,709 | Centuries: 31 | Half-centuries: 59\nVenue record at Wankhede Stadium: 6 innings, avg 58.3\nVs pace bowling avg: 51.3 | Vs spin bowling avg: 46.2"
+  },
+  {
+    "player_id": "demo_bumrah",
+    "player_name": "Jasprit Bumrah",
+    "match_title": "India vs England",
+    "scorecard_str": "England: 245/8 (50.0 overs) RR: 4.9\nJoe Root: 78 runs, 95 balls, SR: 82.1\nBen Stokes: 45 runs, 52 balls, SR: 86.5\nJasprit Bumrah: 10 ov, 38 runs, 3 wkts, Econ: 3.8\nMohammed Siraj: 10 ov, 52 runs, 2 wkts, Econ: 5.2\nIndia: 246/6 (47.3 overs) RR: 5.2\nVirat Kohli: 89 runs, 102 balls, SR: 87.3\nRohit Sharma: 54 runs, 61 balls, SR: 88.5",
+    "context_str": "Match: England tour of India, 2026 - International ODI | Venue: Wankhede Stadium, Mumbai | Toss: England opt to bat",
+    "player_stats_str": "Bowling Style: Right-arm fast\nTest avg: 20.3 | ODI avg: 24.6 | T20I avg: 18.9\nRecent Form (last 5 ODI): 3/38, 1/52, 2/29, 4/36, 2/41\nCareer ODI wickets: 149 | Economy: 4.63\nVenue record at Wankhede: 3 matches, 9 wickets, avg 18.2\nVs left-handers avg: 22.1 | Vs right-handers avg: 25.3"
+  }
+]

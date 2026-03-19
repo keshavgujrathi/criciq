@@ -1,0 +1,47 @@
+[
+  {
+    "match_id": "demo_001",
+    "match_title": "New Zealand vs South Africa",
+    "status": "New Zealand won by 68 runs",
+    "series": "South Africa tour of New Zealand, 2026",
+    "scorecard_str": "New Zealand: 175/6 (20.0 overs) RR: 8.75\nCurrent Bowlers:\nGerald Coetzee: 4 ov, 28 runs, 1 wkts, Econ: 7.0\nNqobani Mokoena: 4 ov, 22 runs, 0 wkts, Econ: 5.5\nOttneil Baartman: 4 ov, 31 runs, 1 wkts, Econ: 7.8\n\nSouth Africa: 107/10 (15.3 overs) RR: 6.9\nLockie Ferguson: 3.3 ov, 16 runs, 3 wkts, Econ: 4.6\nBen Sears: 3 ov, 14 runs, 3 wkts, Econ: 4.7",
+    "commentary_str": "1. Match completed - analysis based on final scorecard.",
+    "context_str": "Match: South Africa tour of New Zealand, 2026 - International | Venue: Seddon Park, Hamilton | Toss: South Africa opt to bowl"
+  },
+  {
+    "match_id": "demo_002",
+    "match_title": "Bangladesh vs Pakistan",
+    "status": "Bangladesh won by 11 runs",
+    "series": "Pakistan tour of Bangladesh, 2026",
+    "scorecard_str": "Bangladesh: 280/9 (50.0 overs) RR: 5.6\nPakistan: 269/10 (49.2 overs) RR: 5.5",
+    "commentary_str": "1. Match completed - analysis based on final scorecard.",
+    "context_str": "Match: Pakistan tour of Bangladesh, 2026 - International ODI | Venue: Sher-e-Bangla National Stadium, Dhaka | Toss: Pakistan opt to bowl"
+  },
+  {
+    "match_id": "demo_003",
+    "match_title": "India vs England",
+    "status": "India won by 4 wickets",
+    "series": "England tour of India, 2026",
+    "scorecard_str": "England: 245/8 (50.0 overs) RR: 4.9\nJoe Root: 78 runs, 95 balls, SR: 82.1\nBen Stokes: 45 runs, 52 balls, SR: 86.5\nJasprit Bumrah: 10 ov, 38 runs, 3 wkts, Econ: 3.8\nMohammed Siraj: 10 ov, 52 runs, 2 wkts, Econ: 5.2\n\nIndia: 246/6 (47.3 overs) RR: 5.2\nVirat Kohli: 89 runs, 102 balls, SR: 87.3\nRohit Sharma: 54 runs, 61 balls, SR: 88.5",
+    "commentary_str": "1. Match completed - analysis based on final scorecard.",
+    "context_str": "Match: England tour of India, 2026 - International ODI | Venue: Wankhede Stadium, Mumbai | Toss: England opt to bat"
+  },
+  {
+    "match_id": "demo_004",
+    "match_title": "Australia vs Sri Lanka",
+    "status": "Australia won by 6 wickets",
+    "series": "Sri Lanka tour of Australia, 2026",
+    "scorecard_str": "Sri Lanka: 187/10 (43.2 overs) RR: 4.3\nKusal Mendis: 67 runs, 89 balls, SR: 75.3\nPat Cummins: 8.2 ov, 32 runs, 4 wkts, Econ: 3.8\nMitchell Starc: 9 ov, 41 runs, 3 wkts, Econ: 4.6\n\nAustralia: 191/4 (38.1 overs) RR: 5.0\nDavid Warner: 71 runs, 78 balls, SR: 91.0\nSteve Smith: 58 runs, 74 balls, SR: 78.4",
+    "commentary_str": "1. Match completed - analysis based on final scorecard.",
+    "context_str": "Match: Sri Lanka tour of Australia, 2026 - International ODI | Venue: Melbourne Cricket Ground | Toss: Sri Lanka opt to bat"
+  },
+  {
+    "match_id": "demo_005",
+    "match_title": "West Indies vs Ireland",
+    "status": "West Indies won by 32 runs",
+    "series": "Ireland tour of West Indies, 2026",
+    "scorecard_str": "West Indies: 312/6 (50.0 overs) RR: 6.2\nShai Hope: 134 runs, 142 balls, SR: 94.4\nNicholas Pooran: 78 runs, 55 balls, SR: 141.8\n\nIreland: 280/9 (50.0 overs) RR: 5.6\nPaul Stirling: 92 runs, 98 balls, SR: 93.9\nLorcan Tucker: 61 runs, 72 balls, SR: 84.7",
+    "commentary_str": "1. Match completed - analysis based on final scorecard.",
+    "context_str": "Match: Ireland tour of West Indies, 2026 - International ODI | Venue: Sabina Park, Kingston | Toss: West Indies opt to bat"
+  }
+]
