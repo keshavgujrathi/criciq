@@ -20,6 +20,12 @@ Cricbuzz API → fetcher.py → formatter.py → prompt_loader.py → llm_client
 
 **Eval layer** (`eval/`): 10 test cases drawn from real match data across multiple series and formats. `eval_runner.py` runs each case through LLM, validates output, and runs 3 consistency passes per case to measure structural variance at temperature 0.3.
 
+## Compare Versions Feature
+
+![Compare Versions](assets/compare_versions.png)
+
+*v1 vs v2 prompt outputs on the same live match data — side by side in the app*
+
 ---
 
 ## The Three Prompt Architectures
@@ -68,6 +74,13 @@ The most structurally demanding mode. The system prompt instructs chain-of-thoug
 **On consistency:** 62.5% structural consistency at temperature 0.3–0.4 indicates model reliably produces required sections but occasionally merges or relabels them across runs. The tactical mode showed the most variance, which aligns with its higher temperature setting and more complex output schema.
 
 **One rate limit hit** on the final test case due to Groq's free tier TPD cap. The runner handles this with a descriptive error rather than a silent failure.
+
+**In production:** rate limit errors would be handled with exponential backoff 
+and jitter on 429 responses, a request queue to serialize concurrent users, and 
+a fallback to `llama-3.1-8b-instant` for non-critical modes when the primary 
+model hits its daily cap. The current implementation prioritises simplicity over 
+reliability — acceptable for a single-user eval runner, not for a live 
+multi-user deployment.
 
 ---
 
