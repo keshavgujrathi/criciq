@@ -2,7 +2,7 @@
 
 A Streamlit web app that generates structured analytical commentary for live and recent cricket matches using LLaMA 3.3-70B via Groq. Three distinct prompt architectures handle match situation analysis, player intelligence reporting, and tactical prediction. Built to explore prompt engineering as a disciplined practice — versioned prompts, structured outputs, and a small evaluation suite with real numbers.
 
-**Live:** [add Streamlit Cloud URL after deployment]
+**Live:** https://criciq.streamlit.app/
 
 ---
 
@@ -104,7 +104,7 @@ The most structurally demanding mode. The system prompt instructs chain-of-thoug
 ## Running Locally
 
 ```bash
-git clone <repo>
+git clone https://github.com/keshavgujrathi/criciq.git
 cd criciq
 pip install -r requirements.txt
 cp .env.example .env
