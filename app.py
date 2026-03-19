@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+import json
 import time
 from dotenv import load_dotenv
 from data.fetcher import CricbuzzFetcher
@@ -45,6 +46,12 @@ def get_matches():
     fetcher = init_fetcher()
     return fetcher.get_live_matches()
 
+def load_demo_matches():
+    """Load demo matches from static JSON file."""
+    demo_path = os.path.join(os.path.dirname(__file__), 'demo_data', 'matches.json')
+    with open(demo_path) as f:
+        return json.load(f)
+
 @st.cache_data(ttl=120)
 def get_match_data(match_id, match_title):
     fetcher = init_fetcher()
@@ -65,15 +72,23 @@ def main():
     with st.sidebar:
         st.header("Match Selection")
         
-        # Refresh button
-        if st.button("🔄 Refresh Matches"):
-            get_matches.clear()
-            get_match_data.clear()
-            st.rerun()
+        # Demo mode toggle
+        demo_mode = st.toggle("Demo Mode", value=True, help="Uses static match data — no API calls")
+        
+        # Refresh button (hidden in demo mode)
+        if not demo_mode:
+            if st.button("🔄 Refresh Matches"):
+                get_matches.clear()
+                get_match_data.clear()
+                st.rerun()
         
         # Get matches
         try:
-            matches = get_matches()
+            if demo_mode:
+                matches = load_demo_matches()
+            else:
+                matches = get_matches()
+            
             if not matches:
                 st.warning("No matches available")
                 return
@@ -96,6 +111,7 @@ def main():
                 
                 # Store in session state
                 st.session_state.selected_match = selected_match
+                st.session_state.demo_mode = demo_mode
                 
         except Exception as e:
             st.error(f"Failed to load matches: {str(e)}")
@@ -110,10 +126,18 @@ def main():
     
     # Get match data
     try:
-        match_data = get_match_data(
-            selected_match['match_id'],
-            selected_match['match_title']
-        )
+        if st.session_state.get('demo_mode', True):
+            match_data = {
+                'match_title': selected_match['match_title'],
+                'scorecard_str': selected_match['scorecard_str'],
+                'commentary_str': selected_match['commentary_str'],
+                'context_str': selected_match['context_str']
+            }
+        else:
+            match_data = get_match_data(
+                selected_match['match_id'],
+                selected_match['match_title']
+            )
     except Exception as e:
         st.error(f"Failed to load match data: {str(e)}")
         return
@@ -256,67 +280,87 @@ def main():
     
     with tab2:
         st.header("Player Intelligence")
-        
-        # Player inputs
+
         col1, col2 = st.columns([2, 1])
-        with col1:
-            player_name = st.text_input("Enter player name")
-            player_id = st.text_input(
-                "Player ID (from Cricbuzz)", 
-                help="Find this in the Cricbuzz URL for the player's profile page"
-            )
         with col2:
-            st.caption("Current Match Context")
-            st.code(match_data['scorecard_str'], language=None)
-        
-        # Analyse button
+            if st.session_state.get('demo_mode', True):
+                pass
+            else:
+                st.caption("Current Match Context")
+                st.code(match_data['scorecard_str'], language=None)
+
+        with col1:
+            if st.session_state.get('demo_mode', True):
+                demo_players = json.load(open(
+                    os.path.join(os.path.dirname(__file__), 'demo_data', 'players.json')
+                ))
+                player_options = {p['player_name']: p for p in demo_players}
+                selected_player_name = st.selectbox("Select Player", options=list(player_options.keys()))
+                selected_player = player_options[selected_player_name]
+                player_stats_str = selected_player['player_stats_str']
+                player_name = selected_player_name
+                player_match_data = {
+                    'match_title': selected_player['match_title'],
+                    'scorecard_str': selected_player['scorecard_str'],
+                    'context_str': selected_player['context_str']
+                }
+                st.caption(f"Match context: **{selected_player['match_title']}**")
+            else:
+                player_name = st.text_input("Enter player name")
+                player_id = st.text_input(
+                    "Player ID (from Cricbuzz)",
+                    help="Find this in the Cricbuzz URL for the player's profile page"
+                )
+
         if st.button("Analyse Player", key="player_analyse"):
-            if not player_name and not player_id:
-                st.error("Please enter either player name or player ID")
-                return
-            
-            with st.spinner("Analyzing player..."):
-                try:
-                    # Get player stats
-                    if player_id:
-                        player_stats = fetcher.get_player_stats(player_id)
-                    else:
-                        st.warning("Player ID required for stats lookup")
-                        return
+            if not player_name:
+                st.error("Please select or enter a player name")
+            else:
+                with st.spinner("Analyzing player..."):
+                    try:
+                        if not st.session_state.get('demo_mode', True):
+                            if not player_id:
+                                st.warning("Player ID required for stats lookup")
+                                return
+                            player_stats_raw = fetcher.get_player_stats(player_id)
+                            player_stats_str = format_player_stats(player_stats_raw)
+                            player_match_data = {
+                                'match_title': match_data['match_title'],
+                                'scorecard_str': match_data['scorecard_str'],
+                                'context_str': match_data['context_str']
+                            }
+                        else:
+                            # Demo mode - use selected player context directly
+                            pass
+
+                        prompt = load_prompt('player_intel', 'v1')
+                        prompt_data = {
+                            'match_title': player_match_data['match_title'],
+                            'context_str': player_match_data['context_str'],
+                            'scorecard_str': player_match_data['scorecard_str'],
+                            'player_name': player_name,
+                            'player_stats_str': player_stats_str
+                        }
+                        system_prompt, user_prompt = fill_template(prompt, **prompt_data)
+                        
+                        response = llm_client.complete(
+                            system_prompt, user_prompt, 
+                            prompt['model'], prompt['temperature']
+                        )
+                        
+                        st.markdown(response)
+                        
+                        # Metrics
+                        metric_col1, metric_col2, metric_col3 = st.columns(3)
+                        with metric_col1:
+                            st.metric("Model", prompt['model'])
+                        with metric_col2:
+                            st.metric("Prompt Version", 'v1')
+                        with metric_col3:
+                            st.metric("Player", player_name)
                     
-                    player_stats_str = format_player_stats(player_stats)
-                    
-                    # Load and fill prompt
-                    prompt = load_prompt('player_intel', 'v1')
-                    prompt_data = {
-                        'match_title': match_data['match_title'],
-                        'context_str': match_data['context_str'],
-                        'scorecard_str': match_data['scorecard_str'],
-                        'player_name': player_name,
-                        'player_stats_str': player_stats_str
-                    }
-                    
-                    system_prompt, user_prompt = fill_template(prompt, **prompt_data)
-                    
-                    # Get response
-                    response = llm_client.complete(
-                        system_prompt, user_prompt, 
-                        prompt['model'], prompt['temperature']
-                    )
-                    
-                    st.markdown(response)
-                    
-                    # Metrics
-                    metric_col1, metric_col2, metric_col3 = st.columns(3)
-                    with metric_col1:
-                        st.metric("Model", prompt['model'])
-                    with metric_col2:
-                        st.metric("Prompt Version", 'v1')
-                    with metric_col3:
-                        st.metric("Player", player_name)
-                
-                except Exception as e:
-                    st.error(f"Player analysis failed: {str(e)}")
+                    except Exception as e:
+                        st.error(f"Player analysis failed: {str(e)}")
     
     with tab3:
         st.header("Tactical Predictor")
