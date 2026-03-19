@@ -11,13 +11,6 @@ from engine.validator import run_full_validation
 # Load environment variables
 load_dotenv()
 
-def get_secret(key):
-    """Get secret from Streamlit secrets or environment variables."""
-    try:
-        return st.secrets[key]
-    except:
-        return os.getenv(key)
-
 # Page configuration
 st.set_page_config(
     page_title="CricIQ", 
@@ -28,13 +21,23 @@ st.set_page_config(
 # Initialize cached resources
 @st.cache_resource
 def init_fetcher():
-    """Initialize CricbuzzFetcher with API key."""
-    return CricbuzzFetcher(get_secret("RAPIDAPI_KEY"))
+    key = os.getenv("RAPIDAPI_KEY")
+    if not key:
+        try:
+            key = st.secrets["RAPIDAPI_KEY"]
+        except:
+            raise RuntimeError("RAPIDAPI_KEY not found in environment or secrets")
+    return CricbuzzFetcher(key)
 
-@st.cache_resource  
+@st.cache_resource
 def init_llm_client():
-    """Initialize GroqClient with API key."""
-    return GroqClient(get_secret("GROQ_API_KEY"))
+    key = os.getenv("GROQ_API_KEY")
+    if not key:
+        try:
+            key = st.secrets["GROQ_API_KEY"]
+        except:
+            raise RuntimeError("GROQ_API_KEY not found in environment or secrets")
+    return GroqClient(key)
 
 @st.cache_data(ttl=120)
 def get_matches():
