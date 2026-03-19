@@ -14,6 +14,8 @@ Cricbuzz API → fetcher.py → formatter.py → prompt_loader.py → llm_client
                                             validator.py ← eval_runner.py
 ```
 
+**Demo Mode:** The app ships with 5 pre-loaded match snapshots and 3 player profiles in `demo_data/` — no API calls required. Toggle off in the sidebar to switch to live Cricbuzz data.
+
 **Data layer** (`data/`): `CricbuzzFetcher` pulls live and recent matches from Cricbuzz RapidAPI endpoint, merges both feeds, and deduplicates by match ID. Separate methods handle scorecards, commentary, match info, and player stats. `formatter.py` converts raw JSON into prompt-injectable strings — flat, readable, no nested structure passed to model.
 
 **Prompt engine** (`engine/`): YAML-based prompt files with explicit versioning. `prompt_loader.py` handles file resolution, version listing, and template variable substitution. `llm_client.py` wraps Groq SDK with separate `complete()` and `stream_complete()` methods. `validator.py` checks output structure compliance and runs a heuristic hallucination scan.
